@@ -10,26 +10,35 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #272727;
+    min-height: 100vh;
+    padding: 1rem;
 }
 main{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
 }
 h1{
-    margin: 2rem;
-    padding: 2rem;
+    margin: 2rem 1rem;
+    padding: 1.5rem;
     background-color: #222222;
     border-radius: 15px;
     color: darkorange;
     box-shadow: 0 0 12px 0 black;
     transition: 0.4s;
+    text-align: center;
+    font-size: 2rem;
 }
 .card{
     padding: 2rem;
-    margin: 2rem;
+    margin: 1rem;
     background-color: #222222;
-    border-radius: 25%;
-    width: 16rem;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 16rem;
     height: 16rem;
     box-shadow: 0 0 12px 0 black;
     display: flex;
@@ -47,6 +56,7 @@ button{
     box-shadow: 0 0 12px 0 black;
     margin: 2rem;
     transition: 0.4s;
+    cursor: pointer;
 }
 button:hover{
     height: 3.3rem;
@@ -60,12 +70,32 @@ img{
     width: 4rem;
     height: 4rem;
     border-radius: 20px;
+    object-fit: cover;
 }
 .portifolio{
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
+    object-fit: cover;
 }
 .card:hover{
     box-shadow: 0 0 12px 0 darkorange;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        width: 85%;
+        margin: 1rem 0;
+    }
 }
